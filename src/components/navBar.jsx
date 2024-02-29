@@ -1,7 +1,7 @@
 import { headerLogo } from "../assets/images";
-import { hamburger } from "../assets/icons";
+import { close, hamburger } from "../assets/icons";
 import { navLinks } from "../constants/index";
-import { useState } from "react";
+
 const NavBar = ({ setIsHamburgerPressed, isHamburgerPressed }) => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
@@ -27,15 +27,15 @@ const NavBar = ({ setIsHamburgerPressed, isHamburgerPressed }) => {
             onClick={() => {
               setIsHamburgerPressed(!isHamburgerPressed);
             }}
-            src={hamburger}
+            src={isHamburgerPressed ? close : hamburger}
             alt="hamburger"
-            width={25}
-            height={25}
+            width={isHamburgerPressed ? 35 : 25}
+            height={isHamburgerPressed ? 35 : 25}
           />
         </div>
       </nav>{" "}
       {isHamburgerPressed && (
-        <div className="bg-black min-h-full min-w-full max-lg:block hidden">
+        <div className=" max-lg:block neo-brutalism-blue hidden transition-opacity duration-500 opacity-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 -z-10">
             {navLinks.map((link, index) => (
               <a
@@ -43,7 +43,7 @@ const NavBar = ({ setIsHamburgerPressed, isHamburgerPressed }) => {
                   setIsHamburgerPressed(false);
                 }}
                 href={link.href}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-montserrat font-medium"
+                className="text-white-400 hover:text-white block px-3 py-2 rounded-md text-base font-montserrat font-medium"
                 key={index}
               >
                 {link.label}

@@ -56,3 +56,20 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
+
+/* Neo Brutalism */
+.neo-brutalism-blue {
+  background: #ff6452;
+  position: relative;
+  border-radius: 10px;
+  border: #ff6452;
+  box-shadow: 0.6vmin 0.6vmin #f05746, 1vmin 1vmin #ec5f4f, 1vmin 1vmin #e06254,
+    0.65vmin 1vmin #d3594c, 1vmin 0.65vmin #cf6e63;
+}
+
+.neo-brutalism-white {
+  background: #fff;
+  border: #fff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
